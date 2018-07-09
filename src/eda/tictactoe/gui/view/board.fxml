@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Game board -->
+<!-- 9x9 grid of 200x200 pixels per cell -->
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="/eda/tictactoe/res/style/style.css"
+          fx:controller="eda.tictactoe.gui.control.Board"
+          xmlns="http://javafx.com/javafx/8.0.121">
+    <!-- board padding -->
+    <rowConstraints>
+        <RowConstraints maxHeight="200"/>
+        <RowConstraints maxHeight="200"/>
+        <RowConstraints maxHeight="200"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="200"/>
+        <ColumnConstraints maxWidth="200"/>
+        <ColumnConstraints maxWidth="200"/>
+    </columnConstraints>
+
+    <!-- cells -->
+    <!-- cell 0x0 -->
+    <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0" onMouseEntered="#startHoverZero"
+               onMouseExited="#stopHoverZero">
+        <ImageView fitHeight="200" fitWidth="200">
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fx:id="zero" fitHeight="200" fitWidth="200"/>
+    </StackPane>
+
+    <!-- cell 0x1 -->
+    <StackPane GridPane.columnIndex="0" GridPane.rowIndex="1" onMouseEntered="#startHoverOne"
+               onMouseExited="#stopHoverOne">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="one"/>
+    </StackPane>
+
+    <!-- cell 0x2 -->
+    <StackPane GridPane.columnIndex="0" GridPane.rowIndex="2" onMouseEntered="#startHoverTwo"
+               onMouseExited="#stopHoverTwo">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="two"/>
+    </StackPane>
+
+    <!-- cell 1x0 -->
+    <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0" onMouseEntered="#startHoverThree"
+               onMouseExited="#stopHoverThree">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="three"/>
+    </StackPane>
+
+    <!-- cell 1x1 -->
+    <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1" onMouseEntered="#startHoverFour"
+               onMouseExited="#stopHoverFour">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="four"/>
+    </StackPane>
+
+    <!-- cell 1x2 -->
+    <StackPane GridPane.columnIndex="1" GridPane.rowIndex="2" onMouseEntered="#startHoverFive"
+               onMouseExited="#stopHoverFive">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="five"/>
+    </StackPane>
+
+    <!-- cell 2x0 -->
+    <StackPane GridPane.columnIndex="2" GridPane.rowIndex="0" onMouseEntered="#startHoverSix"
+               onMouseExited="#stopHoverSix">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="six"/>
+    </StackPane>
+
+    <!-- cell 2x1 -->
+    <StackPane GridPane.columnIndex="2" GridPane.rowIndex="1" onMouseEntered="#startHoverSeven"
+               onMouseExited="#stopHoverSeven">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="seven"/>
+    </StackPane>
+
+    <!-- cell 2x2 -->
+    <StackPane GridPane.columnIndex="2" GridPane.rowIndex="2" onMouseEntered="#startHoverEight"
+               onMouseExited="#stopHoverEight">
+        <ImageView>
+            <Image url="/eda/tictactoe/res/img/box.png" requestedWidth="200" requestedHeight="200"/>
+        </ImageView>
+        <ImageView fitWidth="200" fitHeight="200" fx:id="eight"/>
+    </StackPane>
+</GridPane>
