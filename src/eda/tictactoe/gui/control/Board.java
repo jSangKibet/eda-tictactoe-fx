@@ -17,7 +17,7 @@ public class Board {
     private Image xFadeImg = new Image("/eda/tictactoe/res/img/x_fade.png");
 
     // view items
-    // These imageviews stand for cell 0-8
+    // These imageviews stand for cells 0-8
     @FXML
     private ImageView zero;
     @FXML

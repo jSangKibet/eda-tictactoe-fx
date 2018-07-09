@@ -2,7 +2,7 @@
 /*
     List of file contributors below.
     If you alter this file in your branch, add your name below the following.
-    0. Joseph Sang
+    0. Joseph San
  */
 package eda.tictactoe;
 
