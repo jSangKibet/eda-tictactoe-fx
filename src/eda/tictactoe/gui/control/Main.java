@@ -10,7 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,17 +25,24 @@ public class Main implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // add items to difficulty choices and set default to easy
-        difficulties.getItems().addAll("Easy", "Normal", "Hard");
-        difficulties.setValue("Easy");
+        difficulties.getItems().addAll("Dumb");
+        difficulties.setValue("Dumb");
     }
 
     @FXML
     public void play() {
         try {
+            // set difficulty
+            Board.DIFFICULTY = difficulties.getValue();
+            // save this view for back purposes
+            if (Board.MAIN == null) {
+                Board.MAIN = difficulties.getScene().getRoot();
+            }
+            // load view
             FXMLLoader loader = new FXMLLoader();
-            GridPane board = (GridPane) loader.load(getClass().getResourceAsStream("/eda/tictactoe/gui/view/board.fxml"));
+            VBox board = loader.load(getClass().getResourceAsStream("/eda/tictactoe/gui/view/board.fxml"));
+            // show view
             difficulties.getScene().setRoot(board);
-            // TODO: Add code to go to play screen while setting difficulties
         } catch (IOException e) {
             // handle IOException
             throw new RuntimeException(e);

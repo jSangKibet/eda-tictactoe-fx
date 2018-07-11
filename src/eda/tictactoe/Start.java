@@ -2,7 +2,7 @@
 /*
     List of file contributors below.
     If you alter this file in your branch, add your name below the following.
-    0. Joseph San
+    0. Joseph Sang
  */
 package eda.tictactoe;
 
@@ -18,6 +18,11 @@ import java.io.IOException;
 public class Start extends Application {
     // JavaFX start method
 
+    // Java main method
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -26,9 +31,9 @@ public class Start extends Application {
             primaryStage.setTitle("TicTacToe");
             // icon
             primaryStage.getIcons().add(new Image("/eda/tictactoe/res/img/x.png"));
-            // screen size (600x600, 1:1 aspect ratio, the differences are to account for padding)
-            primaryStage.setWidth(606);
-            primaryStage.setHeight(628);
+            // screen size
+            primaryStage.setWidth(700);
+            primaryStage.setHeight(700);
             // disable resizing(for now)
             primaryStage.setResizable(false);
 
@@ -36,17 +41,12 @@ public class Start extends Application {
             // create FXML loader
             FXMLLoader loader = new FXMLLoader();
             // load main view's fxml file
-            VBox main = (VBox) loader.load(Start.class.getResourceAsStream("/eda/tictactoe/gui/view/main.fxml"));
+            VBox main = loader.load(Start.class.getResourceAsStream("/eda/tictactoe/gui/view/main.fxml"));
             primaryStage.setScene(new Scene(main));
             primaryStage.show();
         } catch (IOException e) {
             // handle IOException
             throw new RuntimeException(e);
         }
-    }
-
-    // Java main method
-    public static void main(String[] args) {
-        launch(args);
     }
 }
