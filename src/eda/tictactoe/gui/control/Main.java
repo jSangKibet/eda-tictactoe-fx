@@ -25,7 +25,7 @@ public class Main implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // add items to difficulty choices and set default to easy
-        difficulties.getItems().addAll("Dumb");
+        difficulties.getItems().addAll("Dumb", "Easy");
         difficulties.setValue("Dumb");
     }
 

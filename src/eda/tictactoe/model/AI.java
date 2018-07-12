@@ -12,7 +12,12 @@ import java.util.Random;
 public abstract class AI {
     // get an ai based on difficulty(just Dumb for now)
     public static AI getDifficulty(String difficulty) {
-        return new AIDumb();
+        switch (difficulty) {
+            case "Easy":
+                return new AIEasy();
+            default:
+                return new AIDumb();
+        }
     }
 
     // randomly generate a starting player
